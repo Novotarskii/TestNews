@@ -1,0 +1,11 @@
+{
+    "news": "News",
+    "stories": "STORIES",
+    "favorites": "FAVORITES",
+    "video": "VIDEO",
+    "hours_ago": " hours ago",
+    "image_missing": "Image is missing",
+    "no_connection": "No connection",
+    "connect_restored": "Connection restored",
+    "error": "Error"
+}

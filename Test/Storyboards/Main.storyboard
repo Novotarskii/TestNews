@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsToolBarController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5x-se-B8N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="Item" image="menuIco" id="091-GY-g9X">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="zeI-is-RKa" kind="presentation" modalPresentationStyle="fullScreen" id="F0o-vl-NUR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="372-K5-3i4"/>
+                                    <barButtonItem title="News" style="done" id="f0A-ve-hKx">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="news"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NdY-ia-jaV"/>
+                                    <barButtonItem systemItem="search" id="5OM-ty-QwG">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IhR-lY-sAg" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c4C-mF-O1f"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="erX-qT-tne">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqw-8a-FbV">
+                                <rect key="frame" x="0.0" y="84" width="414" height="652"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IhR-lY-sAg" firstAttribute="leading" secondItem="EDu-3I-d8J" secondAttribute="leading" id="3W8-Hm-FaK"/>
+                            <constraint firstItem="iqw-8a-FbV" firstAttribute="top" secondItem="IhR-lY-sAg" secondAttribute="bottom" id="4vH-EH-JCN"/>
+                            <constraint firstItem="EDu-3I-d8J" firstAttribute="trailing" secondItem="IhR-lY-sAg" secondAttribute="trailing" id="5Kc-gn-ahJ"/>
+                            <constraint firstItem="iqw-8a-FbV" firstAttribute="leading" secondItem="EDu-3I-d8J" secondAttribute="leading" id="9nl-JZ-ZuT"/>
+                            <constraint firstItem="q5x-se-B8N" firstAttribute="leading" secondItem="EDu-3I-d8J" secondAttribute="leading" id="MuG-uf-3Kn"/>
+                            <constraint firstItem="IhR-lY-sAg" firstAttribute="top" secondItem="q5x-se-B8N" secondAttribute="bottom" id="Nkm-Sn-Xrn"/>
+                            <constraint firstItem="EDu-3I-d8J" firstAttribute="trailing" secondItem="q5x-se-B8N" secondAttribute="trailing" id="Uv9-iW-saV"/>
+                            <constraint firstItem="EDu-3I-d8J" firstAttribute="bottom" secondItem="iqw-8a-FbV" secondAttribute="bottom" id="iuh-CX-CLR"/>
+                            <constraint firstItem="q5x-se-B8N" firstAttribute="top" secondItem="EDu-3I-d8J" secondAttribute="top" id="j2T-dV-dP2"/>
+                            <constraint firstItem="EDu-3I-d8J" firstAttribute="trailing" secondItem="iqw-8a-FbV" secondAttribute="trailing" id="lKC-CC-49q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EDu-3I-d8J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="3iZ-AZ-yi3"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="IhR-lY-sAg" id="Cr3-bg-OKt"/>
+                        <outlet property="containerView" destination="iqw-8a-FbV" id="Sjo-G7-lVX"/>
+                        <outlet property="menuToolBarItem" destination="091-GY-g9X" id="asL-xa-lwZ"/>
+                        <outlet property="newsToolBarItem" destination="f0A-ve-hKx" id="OgP-UH-lxc"/>
+                        <outlet property="searchToolBarItem" destination="5OM-ty-QwG" id="ElO-xu-MyQ"/>
+                        <outlet property="toolbar" destination="q5x-se-B8N" id="iLH-Hd-rvV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="NkD-Wl-c9J">
+            <objects>
+                <tableViewController id="nup-4q-Dw9" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nvX-wi-CHA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5xn-P7-rw8">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5xn-P7-rw8" id="BXU-Gj-E9o">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nup-4q-Dw9" id="3mW-Zk-GFZ"/>
+                            <outlet property="delegate" destination="nup-4q-Dw9" id="WFM-Mf-Ccs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="8du-2y-Tw5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfr-3F-EEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="820"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="h8d-V7-e5s">
+            <objects>
+                <navigationController id="zeI-is-RKa" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8k1-m0-UpK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sl-oN-PfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="nup-4q-Dw9" kind="relationship" relationship="rootViewController" id="ouL-ac-et9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjZ-H1-1YU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="820"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menuIco" width="36" height="24.333333969116211"/>
+    </resources>
+</document>

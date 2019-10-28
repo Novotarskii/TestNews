@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TopNewsCollectionViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="386"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="489" height="386"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopNewsImg" translatesAutoresizingMaskIntoConstraints="NO" id="wjQ-Rn-J4y">
+                        <rect key="frame" x="0.0" y="44" width="489" height="308"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercedes-Benz and Laureus broadening their worldwide involvement" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYu-g4-sch">
+                        <rect key="frame" x="10" y="166" width="469" height="115"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aSc-5B-wcA">
+                        <rect key="frame" x="226" y="79" width="37" height="37"/>
+                    </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Uy-czR">
+                        <rect key="frame" x="5" y="95" width="479" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="image_missing"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F38-na-Bdu">
+                        <rect key="frame" x="10" y="291" width="278" height="21"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Emercedesbenz.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X92-uh-idN">
+                        <rect key="frame" x="15" y="291" width="165" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 2 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASX-Ms-hfb">
+                        <rect key="frame" x="180" y="291" width="103" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XYu-g4-sch" firstAttribute="top" secondItem="aSc-5B-wcA" secondAttribute="bottom" constant="50" id="1PB-cK-B26"/>
+                <constraint firstItem="ASX-Ms-hfb" firstAttribute="trailing" secondItem="F38-na-Bdu" secondAttribute="trailing" constant="-5" id="275-07-Meq"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="XYu-g4-sch" secondAttribute="trailing" constant="10" id="3jk-0Z-hDv"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="F38-na-Bdu" secondAttribute="bottom" constant="40" id="4rY-zD-uh2"/>
+                <constraint firstItem="F38-na-Bdu" firstAttribute="leading" secondItem="XYu-g4-sch" secondAttribute="leading" id="5xw-KZ-gTy"/>
+                <constraint firstItem="ASX-Ms-hfb" firstAttribute="centerY" secondItem="X92-uh-idN" secondAttribute="centerY" id="DSE-hM-41p"/>
+                <constraint firstItem="X92-uh-idN" firstAttribute="top" secondItem="F38-na-Bdu" secondAttribute="top" id="DnI-gl-Nnb"/>
+                <constraint firstItem="X92-uh-idN" firstAttribute="bottom" secondItem="F38-na-Bdu" secondAttribute="bottom" id="ETz-qI-CYd"/>
+                <constraint firstItem="ASX-Ms-hfb" firstAttribute="leading" secondItem="X92-uh-idN" secondAttribute="trailing" id="JAc-yO-nPv"/>
+                <constraint firstItem="XYu-g4-sch" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="JL4-Qn-aNu"/>
+                <constraint firstItem="F38-na-Bdu" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="MRn-gb-Qsr"/>
+                <constraint firstItem="wjQ-Rn-J4y" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="TQF-Rg-Ttd"/>
+                <constraint firstItem="aSc-5B-wcA" firstAttribute="centerX" secondItem="XYu-g4-sch" secondAttribute="centerX" id="V7o-Kz-IvQ"/>
+                <constraint firstItem="X92-uh-idN" firstAttribute="leading" secondItem="F38-na-Bdu" secondAttribute="leading" constant="5" id="VbA-SH-a7G"/>
+                <constraint firstItem="XYu-g4-sch" firstAttribute="top" secondItem="PrL-Uy-czR" secondAttribute="bottom" constant="50" id="Xnl-RO-FqI"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="PrL-Uy-czR" secondAttribute="trailing" constant="5" id="aWO-Jg-mFo"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F38-na-Bdu" secondAttribute="trailing" constant="10" id="kHg-YT-pdX"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="wjQ-Rn-J4y" secondAttribute="trailing" id="r37-fY-UwQ"/>
+                <constraint firstItem="PrL-Uy-czR" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="5" id="rKZ-9v-nnq"/>
+                <constraint firstItem="wjQ-Rn-J4y" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="sWN-Kf-7pi"/>
+                <constraint firstItem="F38-na-Bdu" firstAttribute="top" secondItem="XYu-g4-sch" secondAttribute="bottom" constant="10" id="uuz-30-Xv6"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="wjQ-Rn-J4y" secondAttribute="bottom" id="yCL-eY-jHD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="489" height="386"/>
+            <connections>
+                <outlet property="activityIndicator" destination="aSc-5B-wcA" id="Oiv-bl-jk5"/>
+                <outlet property="newsImg" destination="wjQ-Rn-J4y" id="tj9-nG-kb2"/>
+                <outlet property="newsImgMissingLbl" destination="PrL-Uy-czR" id="eMs-9V-3BJ"/>
+                <outlet property="newsSourceLbl" destination="X92-uh-idN" id="h41-5f-AdN"/>
+                <outlet property="newsTimeLbl" destination="ASX-Ms-hfb" id="N02-MX-wpA"/>
+                <outlet property="newsTitleLbl" destination="XYu-g4-sch" id="nz6-kU-gOP"/>
+                <outlet property="sourceBackgroundView" destination="F38-na-Bdu" id="Pke-3g-7vR"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="48.883928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="TopNewsImg" width="541" height="316.5"/>
+    </resources>
+</document>
